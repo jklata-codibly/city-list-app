@@ -10,5 +10,11 @@ You can also change properties in config file -> `.env`. After changes You can u
 
 Swagger URL: `/api/v1/api-docs`
 
-## APP MONITORING
+## .ENV PROPERTIES
 
+* `APP_PORT` - port used by app inside container (default 8080)
+* `CONTAINER_PORT` - port outside container (default 8080)
+* `PROFILE` - used Spring profiles, (default `csvImport` which means - app will populate DB with given CSV)
+* `MONGODB_URI` - URI od MongoDB
+* `CSV_PATH` - path to CSV file (default `src/main/resources/cities.csv`)
+* `DROP_BEFORE_CSV_IMPORT` - flag (default true) which enables deleting all records before populating with CSV (without enabled `csvImport` profile this flag has no impact on app)
